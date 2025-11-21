@@ -127,10 +127,10 @@ if __name__ == "__main__":
 
             # Salvamento periódico
             if time.time() - ultima_gravacao >= INTERVALO_SALVAMENTO or not os.path.exists(caminho_completo):
-            salvar_csv(caminho_completo, buffer_dados)
-            print(f"Dados salvos em: {caminho_completo}\n")
-            buffer_dados.clear()
-            ultima_gravacao = time.time()
+                salvar_csv(caminho_completo, buffer_dados)
+                print(f"Dados salvos em: {caminho_completo}\n")
+                buffer_dados.clear()
+                ultima_gravacao = time.time()
 
 
             time.sleep(INTERVALO_LEITURA)
